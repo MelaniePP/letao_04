@@ -1,0 +1,30 @@
+.lt_main_left{
+  width: 90px;
+  background-color: skyblue;
+  position: relative;
+  height: 100%;
+  float: left;
+}
+.lt_main_left ul li a{
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+
+}
+.lt_main_right{
+  overflow: hidden;
+  background-color: cyan;
+  height: 100%;
+  position: relative;
+}
+.lt_main_right ul li{
+  width: 33.3%;
+  float: left;
+  text-align: center;
+}
+.lt_main_right ul li img{
+  width: 70px;
+  height: 50px;
+  margin: 0 auto;
+}
