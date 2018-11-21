@@ -1,6 +1,6 @@
 .lt_main_left{
   width: 90px;
-  background-color: skyblue;
+  /* background-color: skyblue; */
   position: relative;
   height: 100%;
   float: left;
@@ -10,11 +10,17 @@
   height: 50px;
   line-height: 50px;
   text-align: center;
-
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  background-color: #E3E4E5;
+}
+.lt_main_left ul li a.current{
+  border-right: none;
+  background-color: #fff;
 }
 .lt_main_right{
   overflow: hidden;
-  background-color: cyan;
+  /* background-color: cyan; */
   height: 100%;
   position: relative;
 }
@@ -27,4 +33,7 @@
   width: 70px;
   height: 50px;
   margin: 0 auto;
+}
+.lt_main_right ul p{
+  padding: 10px;
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function getSearch(k){
+
+    //?key=匡威&age=18&desc=帅
+    var str = location.search;//"?key=%E5%8C%A1%E5%A8%81&age=18&desc=%E5%B8%85"
+    str = decodeURI(str);//?key=匡威&age=18&desc=帅
+    // 截取问号后面的
+    str = str.slice(1);//"key=匡威&age=18&desc=帅"
+    //通过&截取成数组
+    var arr = str.split("&")//["key=匡威", "age=18", "desc=帅"]
+    // 遍历存入空对象中
+    var obj = {};
+    arr.forEach(function(v,i){
+      var key = v.split("=")[0];
+      var value = v.split("=")[1];
+      obj[key] = value;
+       
+    })
+    return obj[k];
+
+
+
+  }
+
+  var res = getSearch("key");
+  console.log(res);
+  </script>
+</body>
+</html>
