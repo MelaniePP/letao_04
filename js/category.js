@@ -9,6 +9,7 @@ $(function(){
     success:function(info){
       // console.log(info);
       $(".lt_main_left ul").html(template("firstTmp",info));
+      renderById(info.rows[0].id);
       
     }
   })
@@ -17,6 +18,10 @@ $(function(){
   $(".lt_main_left ul").on("click","a",function(){
     var id = $(this).data("id");
     $(this).addClass("current").parent().siblings().find("a").removeClass("current");
+    renderById(id);
+  })
+
+  function renderById(id){
     $.ajax({
       type:"get",
       url:"/category/querySecondCategory",
@@ -27,5 +32,5 @@ $(function(){
         $(".lt_main_right ul").html(template("secondTmp",info))
       }
     })
-  })
+  }
 })
