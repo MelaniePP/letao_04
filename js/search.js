@@ -36,4 +36,26 @@ $(".search_btn").on("click",function(){
   render();
   location.href="searchList.html?key="+key;
 })
+
+// 功能二清空记录
+$(".empty_btn").on("click",function(){
+  mui.confirm("你确定要清空历史记录吗？","温馨提示",["取消","确认"],function(e){
+    // console.log(e);
+    if(e.index==1){
+
+      localStorage.removeItem("search_list");
+      render();
+    }
+  })
+})
+
+// 功能三：删除单个数据
+$(".btn_delete").on("click",function(){
+  var index = $(this).data("index");
+
+  var arr = getHistory();
+  arr.splice(index,1);
+  localStorage.setItem("search_list",JSON.stringify(arr));
+  render();
+})
 })

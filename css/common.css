@@ -90,3 +90,36 @@ img {
 .lt_footer ul li p{
   color: #fff;
 }
+.lt_search{
+  padding: 10px;
+  position: relative;
+}
+.lt_search .search_ipt{
+  margin: 0;
+  height: 34px;
+  width: 100%;
+  padding: 8px;
+  font-size: 12px;
+  border:1px solid #479FFF;
+
+}
+.lt_search .search_btn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.lt_product{
+  padding: 10px;
+}
+.lt_product .lt_items{
+  width: 48%;
+  float: left;
+  border: 1px solid #ccc;
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.lt_product .lt_items:nth-child(2n-1){
+  margin-right: 4%;
+}
